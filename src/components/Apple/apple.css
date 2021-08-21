@@ -1,0 +1,29 @@
+
+.apple-cell{
+    display: flex;
+    width: 18px;
+    height: 18px;
+    background-color: rgb(160, 67, 67);
+    border: 1px solid #9acc99;
+    z-index: 1;
+    position: relative;
+}
+
+.empty-cell{
+    display: flex;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #9acc99;
+    z-index: 1;
+    position: relative;
+}
+
+.board-wrap{
+    display:flex;
+    width: 600px;
+    height: 600px;
+    flex-wrap: wrap;
+    top: -600px;
+    z-index: 0;
+    position: relative;
+}

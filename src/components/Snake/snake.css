@@ -1,0 +1,25 @@
+.snake-cell{
+    display: flex;
+    width: 18px;
+    height: 18px;
+    background-color: #010003;
+    border: 1px solid #9acc99;
+    z-index: 2;
+    position: relative;
+}
+.empty-cell{
+    display: flex;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #9acc99;
+    z-index: 2;
+    position: relative;
+}
+.touch{
+    display:flex;
+    width: 600px;
+    height: 600px;
+    flex-wrap: wrap;
+    z-index: 3;
+    position: relative;
+}
