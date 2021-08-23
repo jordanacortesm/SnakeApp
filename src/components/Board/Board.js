@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Apple } from '../Apple/Apple';
+import { PlayPause } from '../PlayPause/PlayPause';
 import { Snake } from '../Snake/Snake';
 import './board.css';
 
@@ -7,22 +8,25 @@ const initialPosition = {
     
     snakeX:4,
     snakeY:14,
-    eat:false,
+    eat:true,
+    score:false,
     next:{
 
         snakeX:5,
         snakeY:14,
-        eat:false,
+        eat:true,
+        score:false,
         next:{
         
             snakeX:6,
             snakeY:14,
-            eat:false,
+            eat:true,
+            score:false,
             next:null
         }
     }
 }
-export const Board = () => {
+export const Board = ({pause, setPause, setScore, setLives, score}) => {
     const initialApple = {
         x:10,
         y:20
@@ -36,12 +40,25 @@ export const Board = () => {
             
             <Snake 
                 setActualSnakePosition={ setActualSnakePosition } 
-                apple={ apple }    
+                apple={ apple }
+                pause={ pause }
+                setLives={ setLives }
+                setPause={ setPause }
             />
             <Apple 
                 actualSnakePosition={ actualSnakePosition }
                 setApple={ setApple }    
+                setScore={ setScore }
             />
+            {
+            pause&&
+            <PlayPause
+                setPause={setPause}
+                pause={pause}
+                score={score}
+                setScore={setScore}
+            />
+            }
         </div>
     )
 }

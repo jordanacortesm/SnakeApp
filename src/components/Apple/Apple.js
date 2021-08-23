@@ -5,13 +5,13 @@ import './apple.css'
 let applePos = {
 }
 const boardMax=30;
-export const Apple = ({ actualSnakePosition, setApple }) => {
+export const Apple = ({ actualSnakePosition, setApple, setScore }) => {
     const tablero = useMemo(() => [ new Array(boardMax).fill(0) , new Array(boardMax).fill(0) ],[]);
 
     useEffect(() => {
 
         const newApplePos = (actualSnakePosition,min,max)=>{
-            console.log(actualSnakePosition);
+            // console.log(actualSnakePosition);
             let x=Math.floor(Math.random() * (max - min + 1)) + min;
             let y=Math.floor(Math.random() * (max - min + 1)) + min;
             
@@ -27,10 +27,11 @@ export const Apple = ({ actualSnakePosition, setApple }) => {
 
         if (!actualSnakePosition.eat) {
             applePos=newApplePos(actualSnakePosition,0,29);
+            actualSnakePosition.score&&setScore((e)=>e+1);
             setApple(applePos);
             
         }
-    }, [actualSnakePosition,setApple])
+    }, [actualSnakePosition,setApple, setScore])
 
     const drawApple = ()=>{
         let mapa=[];

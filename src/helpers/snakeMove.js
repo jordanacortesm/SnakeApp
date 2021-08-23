@@ -10,6 +10,7 @@ export const snakeMove = (snake, direction)=>{
                         snakeX:snake.snakeX-1,
                         snakeY:snake.snakeY,
                         eat:false,
+                        score:true,
                         next:null
                     };
                 }
@@ -17,6 +18,7 @@ export const snakeMove = (snake, direction)=>{
                     snakeX:snake.next.snakeX,
                     snakeY:snake.next.snakeY,
                     eat:false,
+                    score:true,
                     next:snakeLeft(snake.next)};
             }
             return snakeLeft(snake);
@@ -29,6 +31,7 @@ export const snakeMove = (snake, direction)=>{
                         snakeX:snake.snakeX+1,
                         snakeY:snake.snakeY,
                         eat:false,
+                        score:true,
                         next:null
                     };
                 }
@@ -36,6 +39,7 @@ export const snakeMove = (snake, direction)=>{
                     snakeX:snake.next.snakeX,
                     snakeY:snake.next.snakeY,
                     eat:false,
+                    score:true,
                     next:snakeRight(snake.next)};
             }
             return snakeRight(snake);
@@ -48,6 +52,7 @@ export const snakeMove = (snake, direction)=>{
                         snakeX:snake.snakeX,
                         snakeY:snake.snakeY-1,
                         eat:false,
+                        score:true,
                         next:null
                     };
                 }
@@ -55,6 +60,7 @@ export const snakeMove = (snake, direction)=>{
                     snakeX:snake.next.snakeX,
                     snakeY:snake.next.snakeY,
                     eat:false,
+                    score:true,
                     next:snakeUp(snake.next)};
             }
             return snakeUp(snake);
@@ -67,6 +73,7 @@ export const snakeMove = (snake, direction)=>{
                         snakeX:snake.snakeX,
                         snakeY:snake.snakeY+1,
                         eat:false,
+                        score:true,
                         next:null
                     };
                 }
@@ -74,6 +81,7 @@ export const snakeMove = (snake, direction)=>{
                     snakeX:snake.next.snakeX,
                     snakeY:snake.next.snakeY,
                     eat:false,
+                    score:true,
                     next:snakeDown(snake.next)};
             }
             return snakeDown(snake);

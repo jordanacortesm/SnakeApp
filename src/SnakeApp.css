@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body{
+    background-color: #010003;
+    color: #9acc99;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.main-container{
+    width: 80%;
+    max-width: 100%;
+    margin:0 auto;
+    align-items: center;
+    justify-content: center;
+}
+.titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.content{
+    display: flex;
+    justify-content: space-around;
+}
+.containerA{
+    height: 640px;
+    width: 615px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.containerB{
+    height: 665px;
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    background-color: #9acc99;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+.menu{
+    color: #010003;
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.vidas{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.pausa{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.reset-btn{
+    margin-top: -8px;
+    text-align: center;
+	display: inline-block;
+    font-weight: bold;
+    background-color: #9acc99;
+    padding: 10px 10px 10px 10px ;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: #010003;
+    -webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
+	border-radius: 7px;
+    box-shadow: 0 .2em gray; 
+    cursor: pointer;
+
+}
+.score{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
